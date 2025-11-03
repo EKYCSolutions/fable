@@ -66,8 +66,6 @@ configurations:
 | `configurations.detect_faces` | bool | Whether to run face detection before labeling |
 | `configurations.image_extensions` | list[str] | File extensions to include when searching for images |
 
----
-
 ## 🧩 Usage
 
 Run the tool from the command line:
@@ -85,8 +83,6 @@ python label.py /path/to/images -c config.yaml -o output_dir
 | `-o`, `--output_dir` | Directory to store results and tracker files | `out/` |
 | `-w`, `--workers` | Number of concurrent workers (threads) | `4` |
 | `-v`, `--verbose` | Enable verbose logging | `False` |
-
----
 
 ## 🧠 Example Workflow
 
@@ -110,8 +106,6 @@ Processing items:  72%|███████▏  | 72/100 [03:12<01:14,  2.37s/i
 
 If you stop and rerun, it will **resume automatically** without reprocessing finished images.
 
----
-
 ## 🧾 Output
 
 Each processed face is saved to a CSV file (default: `out/annotation.csv`) with the following structure:
@@ -119,8 +113,6 @@ Each processed face is saved to a CSV file (default: `out/annotation.csv`) with 
 | filename | person_id | xmin | ymin | xmax | ymax | glasses | mask | hat | ... |
 |-----------|------------|------|------|------|------|----------|------|------|-----|
 | `images/img1.jpg` | `0` | `32` | `48` | `128` | `144` | `1` | `0` | `0` | ... |
-
----
 
 ## 🔍 How It Works
 
@@ -131,21 +123,6 @@ Each processed face is saved to a CSV file (default: `out/annotation.csv`) with 
 5. **Prompts the model** → using LangChain and your accessories list  
 6. **Parses structured output** → into a Pydantic model  
 7. **Appends results** → to a CSV file  
-
----
-
-## 🧰 Dependencies
-
-| Library | Purpose |
-|----------|----------|
-| `tqdm` | Progress display |
-| `numpy`, `pandas` | Data handling |
-| `pillow` | Image processing |
-| `face_recognition` | Optional face detection |
-| `langchain`, `langchain-ollama` | LLM integration |
-| `PyYAML` | Config parsing |
-
----
 
 ## ⚡ Tips for Better Performance
 
