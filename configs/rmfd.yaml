@@ -13,3 +13,7 @@ accessories:
 configurations:
   model: gemma3:12b
   detect_faces: false
+  image_extensions:
+    - jpg
+    - jpeg
+    - png

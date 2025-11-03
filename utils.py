@@ -1,4 +1,6 @@
+import os
 import base64
+from glob import glob
 from io import BytesIO
 from typing import List, Tuple, Dict, Any
 from pydantic import create_model, BaseModel, Field
@@ -16,6 +18,21 @@ def read_config(filepath: str) -> Dict[str, Any]:
     with open(filepath, "r") as file:
         config = yaml.safe_load(file)
         return config
+    
+def gather_samples(data_dir: str, extensions: List[str]) -> List[str]:
+    """
+    Recursively find all samples within `data_dir` with all the extensions within `extensions`.
+
+    :param data_dir: Base path
+    :param extensions: List of extensions to gather.
+    :returns: A list of file paths of all the match samples.
+    """
+    #
+    all_samples = []
+    for extension in extensions:
+        all_samples += list(glob(os.path.join(data_dir, "**", f"*.{extension}"), recursive=True))
+    #
+    return all_samples
 
 def image_to_base64(image: Image.Image) -> str:
     """
