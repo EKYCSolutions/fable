@@ -30,15 +30,6 @@ def image_to_base64(image: Image.Image) -> str:
         .b64encode(buffered.getvalue())\
         .decode("utf-8")
 
-def detect_faces(image: Image.Image) -> List[Tuple[float]]:
-    """
-    Detects faces from an image.
-
-    :param image: The image to detect faces from.
-    :returns: The list of bounding boxes for faces within `image`.
-    """
-    return []
-
 def create_output_model(accessories: Dict[str, str]) -> BaseModel:
     """
     Creates a dynamic Pydantic BaseModel given the list of `accessories`.
