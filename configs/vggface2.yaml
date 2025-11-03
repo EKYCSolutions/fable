@@ -1,0 +1,15 @@
+accessories:
+  glasses: Eyewear consisting of lenses mounted in a frame resting on the nose and ears, used to cover or protect the eyes. This includes clear or lightly tinted glasses for vision correction or fashion, dark-tinted or reflective sunglasses for sunlight protection, small reading glasses worn lower on the nose for close-up vision, and sealed goggles that fully cover the eyes for swimming, sports, or lab protection.
+  headwear: Any item worn on or covering the head, including structured hats with brims, soft caps with curved visors, protective helmets, fabric or elastic headbands, decorative hair clips or bows, long cloth wraps like turbans, and hoods attached to clothing. Headwear may serve purposes such as fashion, cultural expression, protection from sunlight or impact, or keeping hair in place.
+  beard: Facial hair covering the chin, jawline, and cheeks.
+  mask: Cloth or medical covering over the mouth and nose for protection or concealment.
+  scarf: Long piece of cloth wrapped around the neck or lower face for warmth or fashion.
+  headset: Head-mounted audio device with ear cups and a microphone, used for communication.
+  microphone: Small device held or attached near the mouth, used for speaking or performing.
+  face_shield: Transparent plastic covering extending from forehead to below the chin.
+  earings: Decorative jewelry attached to earlobes, can be studs, hoops, or hanging ornaments.
+  earphones: Small audio devices placed in or over the ears, often connected by a wire or worn wirelessly.
+
+configurations:
+  model: gemma3:12b
+  detect_faces: false
